@@ -10,6 +10,12 @@ pub struct SerializedValue {
     pub data: Option<Vec<u8>>,
 }
 
+impl std::fmt::Debug for SerializedValue {
+    fn fmt(&self, _f: &mut std::fmt::Formatter<'_>) -> Result<(), std::fmt::Error> {
+        unimplemented!()
+    }
+}
+
 impl SerializedValue {
     // We are always reading potentially misaligned pointers with
     // `ptr::read_unaligned`

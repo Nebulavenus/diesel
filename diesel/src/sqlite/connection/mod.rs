@@ -27,10 +27,10 @@ use sqlite::Sqlite;
 /// Connections for the SQLite backend. Unlike other backends, "connection URLs"
 /// for SQLite are file paths, [URIs](https://sqlite.org/uri.html), or special
 /// identifiers like `:memory:`.
-#[allow(missing_debug_implementations)]
+#[allow(missing_debug_implementations, missing_docs)]
 pub struct SqliteConnection {
     statement_cache: StatementCache<Sqlite, Statement>,
-    raw_connection: RawConnection,
+    pub raw_connection: RawConnection,
     transaction_manager: AnsiTransactionManager,
 }
 
